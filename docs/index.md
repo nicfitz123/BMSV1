@@ -15,4 +15,4 @@ Dieses interaktive Skriptum behandelt Grundlagen der Biosignale und Elektronik i
 - [Quellen](quellen.md)
 
 
-*Dieses Skriptum wurde erstellt von Iryna Seifried und Fitzgerald Rodas.*
+*Dieses Skriptum wurde erstellt von Iryna Seyfried und Fitzgerald Rodas.*

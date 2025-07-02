@@ -1,0 +1,21 @@
+site_name: BMSV 1
+nav:
+  - Startseite: index.md
+  - Biosignale: biosignale.md
+  - Elektrische Größen: elektrische-groessen.md
+  - Elektrische Widerstände: elektrische-widerstaende.md
+  - Gleichstromwiderstandsnetze: gleichstromwiderstandsnetze.md
+  - Gleichstromschaltungen: gleichstromschaltungen.md
+  - Formaler Lösungsweg: formaler-loesungsweg.md
+  - Energie und Leistung: energie-und-leistung.md
+  - 1. Test: test-1.md
+  - Quellen: quellen.md
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy

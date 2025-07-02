@@ -1,4 +1,6 @@
 site_name: BMSV 1
+site_description: Skriptum by Iryna Seifried und Fitzgerald Rodas
+
 nav:
   - Startseite: index.md
   - Biosignale: biosignale.md
@@ -13,9 +15,36 @@ nav:
 
 theme:
   name: material
+  favicon: images/favicon.ico
+  logo: images/Skriptum_Logo.png
   language: de
   features:
     - navigation.tabs
     - navigation.sections
     - toc.integrate
     - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+    - scheme: slate
+      primary: teal
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Dunkelmodus
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+
+
+extra_css:
+  - stylesheets/logo.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

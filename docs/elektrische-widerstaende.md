@@ -31,8 +31,9 @@ $$ R = \rho \cdot \frac{l}{A} $$
 | \( A \)    | Querschnittsfläche des Leiters |
 
 Beispielwerte:
-- Kupfer: \( \rho \approx 0{,}0178 \ \Omega \cdot mm^2/m \)
-- Aluminium: \( \rho \approx 0{,}028 \ \Omega \cdot mm^2/m \)
+- Kupfer: \( \rho \approx 0{,}0178\ \Omega \cdot \frac{\mathrm{mm}^2}{\mathrm{m}} \)
+
+- Aluminium: \( \rho \approx 0,028 \ \Omega \cdot mm^2/m \)
 
 ---
 

@@ -1,0 +1,978 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../biosignale/">
+      
+      
+        <link rel="next" href="../elektrische-widerstaende/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Elektrische Größen - BMSV 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elektrische-groen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="BMSV 1" class="md-header__button md-logo" aria-label="BMSV 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BMSV 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Elektrische Größen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../biosignale/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Biosignale
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Elektrische Größen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../elektrische-widerstaende/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Elektrische Widerstände
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gleichstromwiderstandsnetze/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gleichstromwiderstandsnetze
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gleichstromschaltungen/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gleichstromschaltungen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../formaler-loesungsweg/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Formaler Lösungsweg
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../energie-und-leistung/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Energie und Leistung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../test-1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Test
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quellen/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quellen
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="BMSV 1" class="md-nav__button md-logo" aria-label="BMSV 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BMSV 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Startseite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biosignale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Biosignale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Elektrische Größen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elektrische Größen
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-elektrizitat-und-ladung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Elektrizität und Ladung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-leiterklassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Leiterklassen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elektrischer-strom-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Elektrischer Strom (I)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-elektrische-spannung-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Elektrische Spannung (U)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-elektrische-energie-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Elektrische Energie (E)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-elektrische-leistung-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Elektrische Leistung (P)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-elektrischer-widerstand-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Elektrischer Widerstand (R)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ubersicht-formelzeichen-und-einheiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Übersicht: Formelzeichen und Einheiten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-grundgleichungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Grundgleichungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weiterfuhrende-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weiterführende Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elektrische-widerstaende/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elektrische Widerstände
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gleichstromwiderstandsnetze/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gleichstromwiderstandsnetze
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gleichstromschaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gleichstromschaltungen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formaler-loesungsweg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Formaler Lösungsweg
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energie-und-leistung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Energie und Leistung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quellen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quellen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elektrische-groen">Elektrische Größen</h1>
+<p>Dieses Kapitel vermittelt die Grundlagen elektrischer Größen, wie sie in der Elektronik und speziell in der Biosignalverarbeitung auftreten. Es werden Strom, Spannung, Leistung, Energie und Widerstand behandelt – sowohl physikalisch als auch rechnerisch.</p>
+<hr />
+<h2 id="1-elektrizitat-und-ladung">1. Elektrizität und Ladung</h2>
+<ul>
+<li>Elektrizität beruht auf der Bewegung von <strong>elektrischen Ladungsträgern</strong> (Elektronen, Ionen).</li>
+<li>Es gibt <strong>positive</strong> und <strong>negative</strong> Ladungen.</li>
+<li>Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an.</li>
+<li>Ladungsträger bewegen sich in einem <strong>elektrischen Feld</strong>.</li>
+<li>Jede Materie enthält Ladungsträger – meist Elektronen oder Ionen.</li>
+</ul>
+<hr />
+<h2 id="2-leiterklassen">2. Leiterklassen</h2>
+<table>
+<thead>
+<tr>
+<th>Klasse</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Leiter 1. Klasse</strong></td>
+<td>Metalle mit frei beweglichen Elektronen („Elektronengas“)</td>
+</tr>
+<tr>
+<td><strong>Leiter 2. Klasse</strong></td>
+<td>Elektrolyte mit beweglichen Ionen (z. B. in biologischen Flüssigkeiten)</td>
+</tr>
+</tbody>
+</table>
+<p>➡️ In der Biomedizin sind oft Leiter 2. Klasse relevant (z. B. Gewebe, Blut).</p>
+<hr />
+<h2 id="3-elektrischer-strom-i">3. Elektrischer Strom (I)</h2>
+<ul>
+<li><strong>Definition</strong>: Bewegung von elektrischen Ladungsträgern</li>
+<li>Einheit: <strong>Ampere [A]</strong></li>
+<li>Formel:<br />
+  $$ I = \frac{Q}{t} $$
+  wobei:</li>
+<li><em>I</em> = Strom</li>
+<li><em>Q</em> = transportierte Ladung [C]</li>
+<li>
+<p><em>t</em> = Zeit [s]</p>
+</li>
+<li>
+<p>Bei Gleichstrom ist die <strong>Driftgeschwindigkeit</strong> der Elektronen sehr klein (~0.1 mm/s), dennoch wird Information praktisch mit Lichtgeschwindigkeit übertragen.</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-elektrische-spannung-u">4. Elektrische Spannung (U)</h2>
+<ul>
+<li><strong>Definition</strong>: Potenzialdifferenz zwischen zwei Punkten</li>
+<li>Einheit: <strong>Volt [V]</strong></li>
+<li>Spannung ist die <strong>Ursache</strong> für das Fließen von Strom.</li>
+<li>Formel:<br />
+  $$ U = W / Q $$
+  wobei:</li>
+<li><em>W</em> = Energie [J]</li>
+<li><em>Q</em> = Ladung [C]</li>
+</ul>
+<p>➡️ Spannungsquellen (z. B. Batterien, Biozellen) liefern diese Potenzialdifferenz.</p>
+<hr />
+<h2 id="5-elektrische-energie-e">5. Elektrische Energie (E)</h2>
+<ul>
+<li><strong>Definition</strong>: Fähigkeit, elektrische Arbeit zu verrichten</li>
+<li>Einheit: <strong>Joule [J] = Wattsekunde [Ws]</strong></li>
+<li>In biologischen Systemen ist oft die chemisch gespeicherte Energie entscheidend (z. B. ATP in Zellen).</li>
+</ul>
+<p>Formel:
+$$ E = P \cdot t $$</p>
+<hr />
+<h2 id="6-elektrische-leistung-p">6. Elektrische Leistung (P)</h2>
+<ul>
+<li><strong>Definition</strong>: Umgesetzte Energie pro Zeit</li>
+<li>Einheit: <strong>Watt [W]</strong></li>
+<li>Formel:
+  $$ P = U \cdot I $$</li>
+</ul>
+<p>Auch:
+  $$ P = I^2 \cdot R \,\text{ oder }\, P = \frac{U^2}{R} $$</p>
+<p>➡️ Leistungsgrößen sind wichtig zur Bewertung von Verlusten, Wärmeentwicklung und Energieverbrauch.</p>
+<hr />
+<h2 id="7-elektrischer-widerstand-r">7. Elektrischer Widerstand (R)</h2>
+<ul>
+<li><strong>Definition</strong>: Maß für den Widerstand gegen den Stromfluss</li>
+<li>Einheit: <strong>Ohm [Ω]</strong></li>
+<li>
+<p>Formel (Ohmsches Gesetz):<br />
+  $$ R = \frac{U}{I} $$</p>
+</li>
+<li>
+<p>Widerstand ist <strong>materialabhängig</strong> und <strong>temperaturabhängig</strong>.</p>
+</li>
+</ul>
+<p>Beispielhafte Werte:
+- Hautwiderstand: mehrere kΩ (je nach Feuchtigkeit)
+- Leiterbahnen: mΩ
+- Isolatoren: GΩ</p>
+<hr />
+<h2 id="8-ubersicht-formelzeichen-und-einheiten">8. Übersicht: Formelzeichen und Einheiten</h2>
+<table>
+<thead>
+<tr>
+<th>Größe</th>
+<th>Formelzeichen</th>
+<th>Einheit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spannung</td>
+<td>U</td>
+<td>Volt (V)</td>
+</tr>
+<tr>
+<td>Strom</td>
+<td>I</td>
+<td>Ampere (A)</td>
+</tr>
+<tr>
+<td>Widerstand</td>
+<td>R</td>
+<td>Ohm (Ω)</td>
+</tr>
+<tr>
+<td>Energie</td>
+<td>E</td>
+<td>Joule (J)</td>
+</tr>
+<tr>
+<td>Leistung</td>
+<td>P</td>
+<td>Watt (W)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-grundgleichungen">9. Grundgleichungen</h2>
+<ul>
+<li>
+<p>Ohmsches Gesetz:<br />
+  $$ U = R \cdot I $$
+  $$ I = \frac{U}{R} $$
+  $$ R = \frac{U}{I} $$</p>
+</li>
+<li>
+<p>Leistung:
+  $$ P = U \cdot I = I^2 \cdot R = \frac{U^2}{R} $$</p>
+</li>
+<li>
+<p>Energie:
+  $$ E = P \cdot t $$</p>
+</li>
+</ul>
+<hr />
+<h2 id="weiterfuhrende-links">Weiterführende Links</h2>
+<ul>
+<li><a href="https://de.wikipedia.org/wiki/Ohmsches_Gesetz">Ohmsches Gesetz – Wikipedia</a></li>
+<li><a href="https://www.youtube.com/watch?v=gMgCQJeLTvk">Elektrische Leistung – Simpleclub Video (YouTube)</a></li>
+<li><a href="https://de.wikipedia.org/wiki/Leiter_(Physik)">Leiter und Isolatoren – Erklärung</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -43,6 +43,7 @@ Diese lassen sich in drei Zweige aufteilen:
 Spannung wird auf zwei in Serie geschaltete Widerstände aufgeteilt:
 
 $$ U_1 = U_{ges} \cdot \frac{R_1}{R_1 + R_2} $$
+
 $$ U_2 = U_{ges} \cdot \frac{R_2}{R_1 + R_2} $$
 
 ➡️ Anwendung: z. B. zur Einstellung von Bezugsspannungen
@@ -54,6 +55,7 @@ $$ U_2 = U_{ges} \cdot \frac{R_2}{R_1 + R_2} $$
 Ein Gesamtstrom wird auf parallele Widerstände aufgeteilt:
 
 $$ I_1 = I_{ges} \cdot \frac{R_2}{R_1 + R_2} $$
+
 $$ I_2 = I_{ges} \cdot \frac{R_1}{R_1 + R_2} $$
 
 ➡️ Anwendung: z. B. zur Signalaufteilung oder Lastverteilung
@@ -79,6 +81,9 @@ Diese Regeln gelten unabhängig vom Zählpfeilsystem – wichtig ist die **Vorze
 ---
 
 ## 6. Beispiel: Teilspannung berechnen
+
+
+![Reihenschaltung](images/gleichstrom-serienschaltung.png){: .small-img }
 
 Gesucht: Spannung an \( R_4 \)
 

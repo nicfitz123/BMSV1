@@ -8,6 +8,7 @@
   font-size: 3.2rem;     /* z. B. 1.5rem = 24px, Standard ist etwa 1.125rem */
   font-weight: 600;      /* optional: dicker machen */
 }
+/* Bilder und Grafiken formatieren */
 .small-img {
   width: 400px;
 }
@@ -21,4 +22,26 @@
   display: block;
   margin: auto;
   width: 400px;
+}
+/* IFrame Größe */
+iframe.exercise {
+  width: 100%;
+  border: none;
+  height: 520px;  /* einheitliche Höhe */
+  margin-top: 1em;
+  margin-bottom: 2em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+iframe.short-exercise { height: 380px; }
+iframe.long-exercise { height: 600px; }
+
+/* Hauptkapitel in der Sidebar (Level 1) fett und größer */
+.md-nav__item--section > .md-nav__link {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+/* gesamtes Dokument, Schriftgröße*/
+body {
+  font-size: 1.05rem;
 }

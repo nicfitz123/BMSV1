@@ -8,6 +8,25 @@
   font-size: 3.2rem;     /* z. B. 1.5rem = 24px, Standard ist etwa 1.125rem */
   font-weight: 600;      /* optional: dicker machen */
 }
+
+/* Zentrierungsstile für Text und Blöcke */
+.center-text {
+  text-align: center;
+  margin: 0 auto;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Textformatierung */
+.centered-list {
+  text-align: center;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 /* Bilder und Grafiken formatieren */
 .small-img {
   width: 400px;
@@ -45,3 +64,5 @@ iframe.long-exercise { height: 600px; }
 body {
   font-size: 1.05rem;
 }
+
+

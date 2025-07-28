@@ -1185,6 +1185,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-grundgesetze-der-schaltungsanalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Grundgesetze der Schaltungsanalyse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Grundgesetze der Schaltungsanalyse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ohmsches-gesetz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Ohmsches Gesetz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-kirchhoffsche-regeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Kirchhoffsche Regeln
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Kirchhoffsche Regeln">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-knotenregel-1-kirchhoffsches-gesetz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 Knotenregel (1. Kirchhoffsches Gesetz)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-maschenregel-2-kirchhoffsches-gesetz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 Maschenregel (2. Kirchhoffsches Gesetz)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-kombinierte-anwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Kombinierte Anwendung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-biomedizinische-relevanz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Biomedizinische Relevanz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1930,6 +2005,71 @@ U = \frac{W}{Q}
     </script>
   </body>
 '></iframe>
+
+<h2 id="4-grundgesetze-der-schaltungsanalyse">4. Grundgesetze der Schaltungsanalyse<a class="headerlink" href="#4-grundgesetze-der-schaltungsanalyse" title="Permanent link">&para;</a></h2>
+<h3 id="41-ohmsches-gesetz">4.1 Ohmsches Gesetz<a class="headerlink" href="#41-ohmsches-gesetz" title="Permanent link">&para;</a></h3>
+<p><strong>Fundamentale Beziehung:</strong><br />
+$$ \boxed{U = R \cdot I} $$</p>
+<p><strong>Dreiecksdarstellung:</strong>  </p>
+<p><img alt="URI Dreieck" class="small-img centered-img" src="../../images/eg/URI-Dreieck.png" /></p>
+<div class="center-text">
+
+ Spannung (U) = Widerstand (R) × Strom (I) <br> 
+
+ Strom (I) = Spannung (U) / Widerstand (R) <br> 
+
+ Widerstand (R) = Spannung (U) / Strom (I)  
+
+</div>
+<p><strong>Anwendungsbeispiele:</strong><br />
+1. <strong>Spannungsberechnung:</strong><br />
+   Bei R = 1.5kΩ und I = 2mA:<br />
+<span class="arithmatex">\(U = 1.5\,\text{kΩ} \cdot 2\,\text{mA} = 3\,\text{V}\)</span></p>
+<ol>
+<li><strong>Stromberechnung:</strong><br />
+   Bei U = 9V und R = 3kΩ:<br />
+<span class="arithmatex">\(I = \frac{9\,\text{V}}{3\,\text{kΩ}} = 3\,\text{mA}\)</span></li>
+</ol>
+<p><strong>Gültigkeitsbereich:</strong><br />
+Exakt nur für ohmsche Widerstände mit linearer Kennlinie.</p>
+<hr />
+<h3 id="42-kirchhoffsche-regeln">4.2 Kirchhoffsche Regeln<a class="headerlink" href="#42-kirchhoffsche-regeln" title="Permanent link">&para;</a></h3>
+<h4 id="421-knotenregel-1-kirchhoffsches-gesetz">4.2.1 Knotenregel (1. Kirchhoffsches Gesetz)<a class="headerlink" href="#421-knotenregel-1-kirchhoffsches-gesetz" title="Permanent link">&para;</a></h4>
+<p><img alt="Knotenregel" class="small-img centered-img" src="../../images/eg/Knotenregel.png" />
+<strong>Aussage:</strong><br />
+$$ \sum_{k=1}^{n} I_k = 0 $$</p>
+<p><strong>Praxisbeispiel:</strong><br />
+- Zwei abfließende Ströme ( I₃ = 5mA, I₂ = 3mA)<br />
+- Ein zufließender Strom I₁:<br />
+<span class="arithmatex">\(- 5\,\text{mA} - 3\,\text{mA} + I_1 = 0 ⇒ I_1 = 8\,\text{mA}\)</span></p>
+<h4 id="422-maschenregel-2-kirchhoffsches-gesetz">4.2.2 Maschenregel (2. Kirchhoffsches Gesetz)<a class="headerlink" href="#422-maschenregel-2-kirchhoffsches-gesetz" title="Permanent link">&para;</a></h4>
+<p><strong>Aussage:</strong><br />
+$$ \sum_{k=1}^{n} U_k = 0 $$</p>
+<p><strong>Anwendungsfall:</strong><br />
+- Spannungsquelle U = 12V<br />
+- Widerstände R₁ = 1kΩ, R₂ = 2kΩ in Reihe:<br />
+<span class="arithmatex">\(-12\,\text{V} + U_{R1} + U_{R2} = 0\)</span></p>
+<hr />
+<h3 id="43-kombinierte-anwendung">4.3 Kombinierte Anwendung<a class="headerlink" href="#43-kombinierte-anwendung" title="Permanent link">&para;</a></h3>
+<p><strong>Beispielschaltung:</strong><br />
+- U = 24V<br />
+- R₁ = 2kΩ (Reihe)<br />
+- R₂ = 4kΩ ∥ R₃ = 4kΩ (Parallel)</p>
+<p><strong>Berechnungsschritte:</strong><br />
+1. Parallelteil: <span class="arithmatex">\(R_{23} = \frac{4\,\text{kΩ} \cdot 4\,\text{kΩ}}{4\,\text{kΩ} + 4\,\text{kΩ}} = 2\,\text{kΩ}\)</span><br />
+2. Gesamtwiderstand: <span class="arithmatex">\(R_{ges} = 2\,\text{kΩ} + 2\,\text{kΩ} = 4\,\text{kΩ}\)</span><br />
+3. Gesamtstrom: <span class="arithmatex">\(I = \frac{24\,\text{V}}{4\,\text{kΩ}} = 6\,\text{mA}\)</span><br />
+4. Teilspannungen: <span class="arithmatex">\(U_{R1} = 6\,\text{mA} \cdot 2\,\text{kΩ} = 12\,\text{V}\)</span></p>
+<hr />
+<h3 id="44-biomedizinische-relevanz">4.4 Biomedizinische Relevanz<a class="headerlink" href="#44-biomedizinische-relevanz" title="Permanent link">&para;</a></h3>
+<p><strong>Nervenzellmodell:</strong><br />
+- Zellmembran als Widerstands-Kondensator-Netzwerk<br />
+- Aktionspotentiale folgen Netzwerkgesetzen  </p>
+<p><strong>EKG-Messung:</strong><br />
+- Körper als leitendes Medium<br />
+- Spannungsdifferenzen zwischen Elektroden  </p>
+<p><strong>Merksatz:</strong><br />
+"Kirchhoffs Regeln sind das Rückgrat jeder Schaltungsanalyse – ob in Elektronik oder Biologie."</p>
 
 
 

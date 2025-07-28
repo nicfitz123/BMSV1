@@ -5,23 +5,7 @@
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/biosignale_ori/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/energie-und-leistung/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/formaler-loesungsweg/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/gleichstromschaltungen/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/gleichstromwiderstandsnetze/</loc>
+         <loc>https://nicfitz123.github.io/BMSV1/about/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
@@ -29,15 +13,7 @@
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/quellen/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/rechner/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/si-einheiten_ori/</loc>
+         <loc>https://nicfitz123.github.io/BMSV1/links/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
@@ -65,14 +41,6 @@
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/digitaltechnik/digitaltechnik/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/digitaltechnik/digitaltechnik_ori/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
          <loc>https://nicfitz123.github.io/BMSV1/digitaltechnik/logik/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
@@ -85,47 +53,31 @@
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-energie/</loc>
+         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-energie-und-leistung/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-formelzeichen/</loc>
+         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-groessen/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-grundgleichungen/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-leistung/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-leiterklassen/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-links/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-spannung/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-strom/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-widerstand/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/elektrische-groessen/</loc>
+         <loc>https://nicfitz123.github.io/BMSV1/elektrische-groessen/eg-leiter/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>https://nicfitz123.github.io/BMSV1/gleichstromtechnik/elektrische-widerstaende/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://nicfitz123.github.io/BMSV1/gleichstromtechnik/formaler-loesungsweg/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://nicfitz123.github.io/BMSV1/gleichstromtechnik/gleichstromschaltungen/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://nicfitz123.github.io/BMSV1/gleichstromtechnik/widerstandsnetze/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
@@ -158,10 +110,6 @@
     </url>
     <url>
          <loc>https://nicfitz123.github.io/BMSV1/si-einheiten/schreibweise/</loc>
-         <lastmod>2025-07-28</lastmod>
-    </url>
-    <url>
-         <loc>https://nicfitz123.github.io/BMSV1/si-einheiten/si-einheiten/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>

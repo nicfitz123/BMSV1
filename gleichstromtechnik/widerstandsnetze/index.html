@@ -1065,9 +1065,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#interaktive-ubung-gesamtwiderstand-in-reihenschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaktive Übung: Gesamtwiderstand in Reihenschaltung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parallelschaltung" class="md-nav__link">
     <span class="md-ellipsis">
       Parallelschaltung:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaktive-ubung-gesamtwiderstand-in-parallelschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaktive Übung: Gesamtwiderstand in Parallelschaltung
     </span>
   </a>
   
@@ -1462,6 +1480,153 @@ Widerstände sind wie Glieder einer Kette hintereinander geschaltet. Der gleiche
 <p><img alt="Reihenschaltung mit 2 Widerständen" class="small-img centered-img" src="../../images/gt/2-Serienschaltung.png" /></p>
 <p>$$ R_{ges} = R_1 + R_2 $$</p>
 <hr />
+<h3 id="interaktive-ubung-gesamtwiderstand-in-reihenschaltung">Interaktive Übung: Gesamtwiderstand in Reihenschaltung<a class="headerlink" href="#interaktive-ubung-gesamtwiderstand-in-reihenschaltung" title="Permanent link">&para;</a></h3>
+<iframe style="width:100%;border:none;height:650px" srcdoc='
+  <style>
+    body { font-family: sans-serif; padding: 1em; max-width: 600px; margin: 0 auto; }
+    label, input { display: block; margin: 0.5em 0; font-size: 1rem; }
+    input { padding: 0.6em; width: 100%; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+    button { margin: 1em 0; padding: 0.7em 1.5em; background: #0078d7; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+    button:hover { background: #106ebe; }
+    #feedback { margin: 1.5em 0; padding: 1em; border-radius: 4px; line-height: 1.5; }
+    .ok { background: #e6f4ea; color: #107c10; border-left: 4px solid #107c10; }
+    .fail { background: #fdf0f0; color: #d83b01; border-left: 4px solid #d83b01; }
+    #hilfe { margin-top: 1.5em; padding: 0.8em; background: #f3f2f1; border-radius: 4px; font-size: 0.9em; color: #323130; }
+    .aufgabentext { font-size: 1.1em; margin-bottom: 1em; line-height: 1.6; }
+    .einheit-hinweis { font-size: 0.9em; color: #605e5c; margin-top: 0.3em; }
+  </style>
+  <body>
+    <h2 style="color: #0078d7; margin-bottom: 0.5em;">Reihenschaltung von Widerständen</h2>
+    <p style="margin-top: 0;">Berechne den Gesamtwiderstand einer Reihenschaltung:</p>
+
+    <div class="aufgabentext" id="aufgabe">Aufgabe wird geladen…</div>
+
+    <label for="antwort">Ihre Lösung:</label>
+    <input id="antwort" type="text" placeholder="z.B. 3.2k oder 1.5M oder 1200000">
+    <p class="einheit-hinweis">Du kannst Ω, kΩ oder MΩ verwenden (z.B. "4700", "4.7k" oder "0.0047M")</p>
+
+    <button onclick="check()">Lösung überprüfen</button>
+    <button onclick="generate()" style="background: #fff; color: #0078d7; border: 1px solid #0078d7;">Neue Aufgabe</button>
+
+    <div id="feedback"></div>
+
+    <div id="hilfe">
+      <strong>Tipps zur Eingabe:</strong>
+      <ul style="margin-bottom: 0;">
+        <li>1 kΩ = 1000 Ω (kilo)</li>
+        <li>1 MΩ = 1000000 Ω (mega)</li>
+        <li>Wissenschaftliche Schreibweise: 1.2e3 = 1200</li>
+        <li>Dezimaltrennzeichen: Punkt oder Komma</li>
+      </ul>
+    </div>
+
+    <script>
+      const E12_REIHE = [1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2];
+      const EINHEITEN = {
+        "Ω": 1,
+        "kΩ": 1e3,
+        "MΩ": 1e6
+      };
+
+      let R1, R2, korrekt;
+
+      function formatWiderstand(wert) {
+        if (wert >= 1e6) return (wert/1e6).toFixed(6).replace(/\.?0+$/, "") + " MΩ";
+        if (wert >= 1e3) return (wert/1e3).toFixed(6).replace(/\.?0+$/, "") + " kΩ";
+        return wert.toFixed(6).replace(/\.?0+$/, "") + " Ω";
+      }
+
+      function parseInput(eingabe) {
+        // Normalisierung
+        eingabe = eingabe.trim().replace(/,/g, ".").replace(/\s/g, "").toLowerCase();
+
+        // Einheitenerkennung
+        let einheit = 1;
+        if (eingabe.endsWith("m") || eingabe.includes("mΩ")) {
+          einheit = 1e6;
+          eingabe = eingabe.replace(/mΩ?/, "");
+        } else if (eingabe.endsWith("k") || eingabe.includes("kΩ")) {
+          einheit = 1e3;
+          eingabe = eingabe.replace(/kΩ?/, "");
+        } else if (eingabe.includes("Ω")) {
+          eingabe = eingabe.replace("Ω", "");
+        }
+
+        // Wissenschaftliche Notation
+        if (/[0-9]e[-+]?[0-9]/.test(eingabe)) {
+          const [mantisse, exponent] = eingabe.split(/e/);
+          return parseFloat(mantisse) * Math.pow(10, parseInt(exponent)) * einheit;
+        }
+
+        return parseFloat(eingabe) * einheit;
+      }
+
+      function generate() {
+        const basis1 = E12_REIHE[Math.floor(Math.random() * E12_REIHE.length)];
+        const basis2 = E12_REIHE[Math.floor(Math.random() * E12_REIHE.length)];
+
+        // Exponenten für verschiedene Größenordnungen (0=Ω, 1=10Ω, 2=100Ω, 3=kΩ, 6=MΩ)
+        let exp1 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+        let exp2 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+
+        // Sicherstellen, dass unterschiedliche Größenordnungen vorkommen
+        while (Math.abs(exp1 - exp2) < 2) {
+          exp2 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+        }
+
+        R1 = basis1 * Math.pow(10, exp1);
+        R2 = basis2 * Math.pow(10, exp2);
+        korrekt = R1 + R2;
+
+        document.getElementById("aufgabe").innerHTML = 
+          `R<sub>1</sub> = ${formatWiderstand(R1)}<br>
+           R<sub>2</sub> = ${formatWiderstand(R2)}`;
+        document.getElementById("antwort").value = "";
+        document.getElementById("feedback").innerHTML = "";
+      }
+
+      function check() {
+        try {
+          const eingabe = document.getElementById("antwort").value;
+          if (!eingabe.trim()) throw new Error("Bitte gib einen Wert ein");
+
+          const eingabeWert = parseInput(eingabe);
+          if (isNaN(eingabeWert)) throw new Error("Ungültige Zahl");
+
+          const abweichung = Math.abs(eingabeWert - korrekt);
+          const toleranz = korrekt * 0.01; // 1% Toleranz
+
+          if (abweichung <= toleranz) {
+            document.getElementById("feedback").innerHTML = 
+              `<div class="ok">
+                <strong>✅ Korrekt!</strong><br>
+                R<sub>ges</sub> = ${formatWiderstand(R1)} + ${formatWiderstand(R2)} = ${formatWiderstand(korrekt)}
+              </div>`;
+          } else {
+            throw new Error("Falsches Ergebnis");
+          }
+        } catch (error) {
+          document.getElementById("feedback").innerHTML = 
+            `<div class="fail">
+              <strong>❌ ${error.message === "Falsches Ergebnis" ? "Nicht ganz richtig" : error.message}</strong><br>
+              ${error.message === "Falsches Ergebnis" ? 
+                `R<sub>ges</sub> = ${formatWiderstand(R1)} + ${formatWiderstand(R2)} = ${formatWiderstand(korrekt)}<br>
+                 Ihre Eingabe: ${document.getElementById("antwort").value}` : 
+                "Gültige Formate: 4700, 4.7k, 0.0047M oder 4.7e3"}
+            </div>`;
+        }
+      }
+
+      // Initialisierung
+      generate();
+      document.getElementById("antwort").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") check();
+      });
+    </script>
+  </body>
+'></iframe>
+
+<hr />
 <p>Sehen wir uns den allgemeinen Fall mit mehreren Widerständen an:</p>
 <p><img alt="Reihenschaltung mit n Widerständen" class="small-img centered-img" src="../../images/gt/N-Serienschaltung.png" /></p>
 <p>$$ R_{ges} = R_1 + R_2 + ... + R_n $$</p>
@@ -1496,7 +1661,158 @@ $$ \boxed{R_{ges} = \frac{R_1 R_2}{R_1 + R_2}} $$</p>
 <p><strong>🧠 Merkregel:</strong>
 "Produkt der Widerstände geteilt durch die Summe"</p>
 <hr />
-<p>bzw. allgemein:</p>
+<h3 id="interaktive-ubung-gesamtwiderstand-in-parallelschaltung">Interaktive Übung: Gesamtwiderstand in Parallelschaltung<a class="headerlink" href="#interaktive-ubung-gesamtwiderstand-in-parallelschaltung" title="Permanent link">&para;</a></h3>
+<iframe style="width:100%;border:none;height:650px" srcdoc='
+  <style>
+    body { font-family: sans-serif; padding: 1em; max-width: 600px; margin: 0 auto; }
+    label, input { display: block; margin: 0.5em 0; font-size: 1rem; }
+    input { padding: 0.6em; width: 100%; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+    button { margin: 1em 0; padding: 0.7em 1.5em; background: #0078d7; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+    button:hover { background: #106ebe; }
+    #feedback { margin: 1.5em 0; padding: 1em; border-radius: 4px; line-height: 1.5; }
+    .ok { background: #e6f4ea; color: #107c10; border-left: 4px solid #107c10; }
+    .fail { background: #fdf0f0; color: #d83b01; border-left: 4px solid #d83b01; }
+    #hilfe { margin-top: 1.5em; padding: 0.8em; background: #f3f2f1; border-radius: 4px; font-size: 0.9em; color: #323130; }
+    .aufgabentext { font-size: 1.1em; margin-bottom: 1em; line-height: 1.6; }
+    .einheit-hinweis { font-size: 0.9em; color: #605e5c; margin-top: 0.3em; }
+    .formel { font-family: monospace; background: #f3f2f1; padding: 0.2em 0.4em; border-radius: 3px; }
+  </style>
+  <body>
+    <h2 style="color: #0078d7; margin-bottom: 0.5em;">Parallelschaltung von Widerständen</h2>
+    <p style="margin-top: 0;">Berechnen Sie den Gesamtwiderstand der Parallelschaltung:</p>
+
+    <div class="aufgabentext" id="aufgabe">Aufgabe wird geladen…</div>
+
+    <label for="antwort">Ihre Lösung:</label>
+    <input id="antwort" type="text" placeholder="z.B. 2.2k oder 0.68M oder 1500">
+    <p class="einheit-hinweis">Sie können Ω, kΩ oder MΩ verwenden (z.B. "4700", "4.7k" oder "0.0047M")</p>
+
+    <button onclick="check()">Lösung überprüfen</button>
+    <button onclick="generate()" style="background: #fff; color: #0078d7; border: 1px solid #0078d7;">Neue Aufgabe</button>
+
+    <div id="feedback"></div>
+
+    <div id="hilfe">
+      <strong>Tipps zur Berechnung:</strong>
+      <ul style="margin-bottom: 0;">
+        <li>Formel: <span class="formel">1/R<sub>ges</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub></span></li>
+        <li>1 kΩ = 1000 Ω (kilo)</li>
+        <li>1 MΩ = 1000000 Ω (mega)</li>
+        <li>Bei zwei gleichen Widerständen: R<sub>ges</sub> = R/2</li>
+      </ul>
+    </div>
+
+    <script>
+      const E12_REIHE = [1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2];
+      const EINHEITEN = {
+        "Ω": 1,
+        "kΩ": 1e3,
+        "MΩ": 1e6
+      };
+
+      let R1, R2, korrekt;
+
+      function formatWiderstand(wert) {
+        if (wert >= 1e6) return (wert/1e6).toFixed(6).replace(/\.?0+$/, "") + " MΩ";
+        if (wert >= 1e3) return (wert/1e3).toFixed(6).replace(/\.?0+$/, "") + " kΩ";
+        if (wert < 1) return wert.toFixed(6).replace(/\.?0+$/, "") + " Ω";
+        return wert.toString().replace(/\.0+$/, "") + " Ω";
+      }
+
+      function parseInput(eingabe) {
+        // Normalisierung
+        eingabe = eingabe.trim().replace(/,/g, ".").replace(/\s/g, "").toLowerCase();
+
+        // Einheitenerkennung
+        let einheit = 1;
+        if (eingabe.endsWith("m") || eingabe.includes("mΩ")) {
+          einheit = 1e6;
+          eingabe = eingabe.replace(/mΩ?/, "");
+        } else if (eingabe.endsWith("k") || eingabe.includes("kΩ")) {
+          einheit = 1e3;
+          eingabe = eingabe.replace(/kΩ?/, "");
+        } else if (eingabe.includes("Ω")) {
+          eingabe = eingabe.replace("Ω", "");
+        }
+
+        // Wissenschaftliche Notation
+        if (/[0-9]e[-+]?[0-9]/.test(eingabe)) {
+          const [mantisse, exponent] = eingabe.split(/e/);
+          return parseFloat(mantisse) * Math.pow(10, parseInt(exponent)) * einheit;
+        }
+
+        return parseFloat(eingabe) * einheit;
+      }
+
+      function generate() {
+        const basis1 = E12_REIHE[Math.floor(Math.random() * E12_REIHE.length)];
+        const basis2 = E12_REIHE[Math.floor(Math.random() * E12_REIHE.length)];
+
+        // Exponenten für verschiedene Größenordnungen (0=Ω, 1=10Ω, 2=100Ω, 3=kΩ, 6=MΩ)
+        let exp1 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+        let exp2 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+
+        // Sicherstellen, dass unterschiedliche Größenordnungen vorkommen
+        while (Math.abs(exp1 - exp2) < 2) {
+          exp2 = [0,1,2,3,6][Math.floor(Math.random() * 5)];
+        }
+
+        R1 = basis1 * Math.pow(10, exp1);
+        R2 = basis2 * Math.pow(10, exp2);
+        korrekt = 1 / (1/R1 + 1/R2);
+
+        document.getElementById("aufgabe").innerHTML = 
+          `R<sub>1</sub> = ${formatWiderstand(R1)}<br>
+           R<sub>2</sub> = ${formatWiderstand(R2)}`;
+        document.getElementById("antwort").value = "";
+        document.getElementById("feedback").innerHTML = "";
+      }
+
+      function check() {
+        try {
+          const eingabe = document.getElementById("antwort").value;
+          if (!eingabe.trim()) throw new Error("Bitte geben Sie einen Wert ein");
+
+          const eingabeWert = parseInput(eingabe);
+          if (isNaN(eingabeWert)) throw new Error("Ungültige Zahl");
+
+          const abweichung = Math.abs(eingabeWert - korrekt);
+          const toleranz = korrekt * 0.01; // 1% Toleranz
+
+          if (abweichung <= toleranz) {
+            document.getElementById("feedback").innerHTML = 
+              `<div class="ok">
+                <strong>✅ Korrekt!</strong><br>
+                <span class="formel">1/R<sub>ges</sub> = 1/${formatWiderstand(R1)} + 1/${formatWiderstand(R2)}</span><br>
+                R<sub>ges</sub> = ${formatWiderstand(korrekt)}
+              </div>`;
+          } else {
+            throw new Error("Falsches Ergebnis");
+          }
+        } catch (error) {
+          document.getElementById("feedback").innerHTML = 
+            `<div class="fail">
+              <strong>❌ ${error.message === "Falsches Ergebnis" ? "Nicht ganz richtig" : error.message}</strong><br>
+              ${error.message === "Falsches Ergebnis" ? 
+                `<span class="formel">1/R<sub>ges</sub> = 1/${formatWiderstand(R1)} + 1/${formatWiderstand(R2)} = ${formatWiderstand(1/R1 + 1/R2).replace("Ω", "S")}</span><br>
+                 R<sub>ges</sub> = ${formatWiderstand(korrekt)}<br>
+                 Ihre Eingabe: ${document.getElementById("antwort").value}` : 
+                "Gültige Formate: 4700, 4.7k, 0.0047M oder 4.7e3"}
+            </div>`;
+        }
+      }
+
+      // Initialisierung
+      generate();
+      document.getElementById("antwort").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") check();
+      });
+    </script>
+  </body>
+'></iframe>
+
+<hr />
+<p>Sehen wir uns nun den allegmeinen Fall mit n Widerständen an:</p>
 <p><img alt="Parallelschaltung mit N Widerständen" class="small-img centered-img" src="../../images/gt/N-Parallelschaltung.png" /></p>
 <p>$$ \frac{1}{R_{ges}} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} $$</p>
 <h3 id="102-wheatstone-brucke">10.2 Wheatstone-Brücke<a class="headerlink" href="#102-wheatstone-brucke" title="Permanent link">&para;</a></h3>

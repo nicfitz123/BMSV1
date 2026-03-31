@@ -3,19 +3,22 @@ site_description: Skriptum by Iryna Seifried und Fitzgerald Rodas
 
 nav:
   - Startseite: index.md
-  - Biosignale: biosignale.md
-  - Elektrische Größen: elektrische-groessen.md
-  - Elektrische Widerstände: elektrische-widerstaende.md
-  - Gleichstromwiderstandsnetze: gleichstromwiderstandsnetze.md
-  - Gleichstromschaltungen: gleichstromschaltungen.md
-  - Formaler Lösungsweg: formaler-loesungsweg.md
-  - Energie und Leistung: energie-und-leistung.md
-  - Elektrische Messtechnik:
+  - Elektrotechnik:
+      - Elektrische Größen: elektrische-groessen.md
+      - Elektrische Widerstände: elektrische-widerstaende.md
+      - Gleichstromwiderstandsnetze: gleichstromwiderstandsnetze.md
+      - Gleichstromschaltungen: gleichstromschaltungen.md
+      - Formaler Lösungsweg: formaler-loesungsweg.md
+      - Energie und Leistung: energie-und-leistung.md
+  - Messtechnik:
       - Messverfahren: messverfahren.md
       - Überlagerungsprinzip: ueberlagerungsprinzip.md
-  - Biomedizinische Sensortechnik: sensoren.md
-  - 1. Test: test-1.md
-  - Quellen: quellen.md
+  - Biomedizin:
+      - Biosignale: biosignale.md
+      - Biomedizinische Sensortechnik: sensoren.md
+  - Übungen & Tests:
+      - 1. Test: test-1.md
+      - Quellen: quellen.md
 
 theme:
   name: material
@@ -25,6 +28,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
     - toc.integrate
     - content.code.copy
   palette:

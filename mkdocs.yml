@@ -6,10 +6,14 @@ nav:
   - Biosignale: biosignale.md
   - Elektrische Größen: elektrische-groessen.md
   - Elektrische Widerstände: elektrische-widerstaende.md
+  - Elektrische Messtechnik:
+      - Messverfahren: messverfahren.md
+      - Überlagerungsprinzip: ueberlagerungsprinzip.md
   - Gleichstromwiderstandsnetze: gleichstromwiderstandsnetze.md
   - Gleichstromschaltungen: gleichstromschaltungen.md
   - Formaler Lösungsweg: formaler-loesungsweg.md
   - Energie und Leistung: energie-und-leistung.md
+  - Biomedizinische Sensortechnik: sensoren.md
   - 1. Test: test-1.md
   - Quellen: quellen.md
 

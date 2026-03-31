@@ -20,6 +20,10 @@ Dieses interaktive Skriptum behandelt Grundlagen der Biosignale und Elektronik i
 - [Biosignale](biosignale.md)
 - [Biomedizinische Sensortechnik](sensoren.md)
 
+### Medizinische Gerätetechnik
+- [Kardiologische Diagnostik](kardiologische-diagnostik.md)
+- [Hygiene bei medizinischen Geräten](hygiene-medizinische-geraete.md)
+
 ### Übungen & Tests
 - [1. Test](test-1.md)
 - [Quellen](quellen.md)

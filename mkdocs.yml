@@ -3,43 +3,19 @@ site_description: Skriptum by Iryna Seifried und Fitzgerald Rodas
 
 nav:
   - Startseite: index.md
-  - SI-Einheiten:
-      - Einleitung: si-einheiten/einleitung.md
-      - SI-Basiseinheiten: si-einheiten/basiseinheiten.md
-      - Abgeleitete Einheiten: si-einheiten/abgeleitete-einheiten.md
-      - SI-Vorsilben: si-einheiten/vorsilben.md
-      - Wissenschaftliche Notation: si-einheiten/wissenschaftliche-notation.md
-      - Übungsaufgabe: si-einheiten/aufgabe1.md
-      - Anwendungen: si-einheiten/anwendungen.md
-      - Schreibweise: si-einheiten/schreibweise.md
-      - Beispiel: si-einheiten/biosignal-beispiel.md
-      - Praktische Beispiele: si-einheiten/aufgabe2.md
-  - Digitaltechnik:
-      - Zahlensysteme: digitaltechnik/zahlensysteme.md
-      - Logik & Wahrheitstabellen: digitaltechnik/logik.md
-  - Biosignale:
-      - Grundlagen: biosignale/basics.md
-      - Physiologie: biosignale/physiologie.md
-      - Klassifikation: biosignale/klassifikation.md
-      - Messkette: biosignale/messkette.md
-  - Elektrische Größen:
-      - Einleitung: elektrische-groessen/eg-einleitung.md
-      - Ladung, Strom, Spannung: elektrische-groessen/eg-groessen.md
-      - Energie und Leistung: elektrische-groessen/eg-energie-und-leistung.md
-      - Elektrische Leiter: elektrische-groessen/eg-leiter.md
-  - Gleichstromtechnik:
-      - Elektrische Widerstände: gleichstromtechnik/elektrische-widerstaende.md
-      - Widerstandsnetze: gleichstromtechnik/widerstandsnetze.md
-      - Gleichstromschaltungen: gleichstromtechnik/gleichstromschaltungen.md
-      - Formale Lösungswege: gleichstromtechnik/formaler-loesungsweg.md
+  - Biosignale: biosignale.md
+  - Elektrische Größen: elektrische-groessen.md
+  - Elektrische Widerstände: elektrische-widerstaende.md
+  - Gleichstromwiderstandsnetze: gleichstromwiderstandsnetze.md
+  - Gleichstromschaltungen: gleichstromschaltungen.md
+  - Formaler Lösungsweg: formaler-loesungsweg.md
+  - Energie und Leistung: energie-und-leistung.md
   - Elektrische Messtechnik:
       - Messverfahren: messverfahren.md
       - Überlagerungsprinzip: ueberlagerungsprinzip.md
   - Biomedizinische Sensortechnik: sensoren.md
-  - Glossar: glossar.md
-  - Quellen und Links: quellen.md
-  - Über: about.md
   - 1. Test: test-1.md
+  - Quellen: quellen.md
 
 theme:
   name: material
